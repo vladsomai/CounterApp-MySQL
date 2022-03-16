@@ -9,9 +9,6 @@ DECLARE project_idParam int;
 if (select exists(select * from Projects where adapter_code=adapter_codeParam and fixture_type=fixture_typeParam)) then
 select entry_id into project_idParam from Projects where adapter_code = adapter_codeParam and fixture_type = fixture_typeParam;
 
-#first, delete all the foreign keys from tp_description table
-delete from tp_description where project_id = project_idParam;
-
 #delete the actual row
 delete from Projects 
 where adapter_code = adapter_codeParam and fixture_type = fixture_typeParam;
@@ -23,4 +20,4 @@ END;
 //
 delimiter ;
 
-call deleteProject(1704, "ICT");
+call deleteProject(92, "FCT");

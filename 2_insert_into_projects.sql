@@ -27,6 +27,8 @@ END;
 //
 delimiter ;
 
+
+
 ######################### FCT PROJECT #########################
 call insertProject("BR213 GFX",91,"FCT","root",80000,70000,"root");
 call insertProject("BR222 Mopf KAF",92,"FCT","root",80000,70000,"root");

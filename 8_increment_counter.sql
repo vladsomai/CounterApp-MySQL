@@ -24,8 +24,8 @@ delimiter ;
 
 /*
 */
-call incrementCounter(1714, "ICT");
-call incrementCounter(1711, "ICT");
+call incrementCounter(1613, "ICT");
+call incrementCounter(1608, "ICT");
 
-call incrementCounter(1730, "FCT");
-call incrementCounter(1707, "ICT");
+call incrementCounter(91, "FCT");
+call incrementCounter(113, "FCT");
