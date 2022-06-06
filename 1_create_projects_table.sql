@@ -13,5 +13,8 @@ CREATE TABLE Projects (
     temperature INT DEFAULT 0,
     modified_by VARCHAR(100) NOT NULL default "ROOT",
     last_update DATETIME,
-    CONSTRAINT CheckWarningLessThanLimit CHECK (contacts_limit > 0 and (warning_at < contacts_limit))
+    CONSTRAINT CheckWarningLessThanLimit CHECK (
+        contacts_limit > 0
+        and (warning_at < contacts_limit)
+    )
 );
