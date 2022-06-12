@@ -5,7 +5,7 @@ CREATE TABLE Projects (
     project_name VARCHAR(100) NOT NULL,
     adapter_code INT NOT NULL,
     fixture_type VARCHAR(30) NOT NULL,
-    owner_email VARCHAR(65000) NOT NULL,
+    owner_email TEXT NOT NULL,
     contacts INT DEFAULT 0,
     contacts_limit INT NOT NULL,
     warning_at INT NOT NULL,

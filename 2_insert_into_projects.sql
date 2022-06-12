@@ -1,7 +1,7 @@
 drop procedure if exists insertProject;
 
 delimiter //
-CREATE procedure insertProject(project_nameParam varchar(100), adapter_codeParam INT, fixture_typeParam VARCHAR(30), owner_emailParam varchar(100), contacts_limitParam int, warning_atParam int, modified_byParam VARCHAR(100))
+CREATE procedure insertProject(project_nameParam varchar(100), adapter_codeParam INT, fixture_typeParam VARCHAR(30), owner_emailParam TEXT, contacts_limitParam int, warning_atParam int, modified_byParam VARCHAR(100))
 BEGIN
 
 if not(select exists(select* from Projects where adapter_code=adapter_codeParam and fixture_type=fixture_typeParam)) then
