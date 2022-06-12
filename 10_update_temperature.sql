@@ -16,5 +16,5 @@ END;
 //
 delimiter ;
 
-call updateTemperature(91, "FCT", 23);
+#call updateTemperature(91, "FCT", 23);
 

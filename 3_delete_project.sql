@@ -20,4 +20,4 @@ END;
 //
 delimiter ;
 
-call deleteProject(92, "FCT");
+#call deleteProject(92, "FCT");

@@ -1,12 +1,13 @@
-drop procedure if exists updateWarning;
+drop procedure if exists resetCounter;
 
 delimiter //
-CREATE PROCEDURE updateWarning(adapter_codeParam int, fixture_typeParam VARCHAR(30), warning_atParam int, modified_byParam VARCHAR(50))
+CREATE PROCEDURE resetCounter(adapter_codeParam int, fixture_typeParam VARCHAR(30), modified_byParam VARCHAR(50))
 BEGIN
 
 if (select exists(select * from Projects where adapter_code=adapter_codeParam and fixture_type=fixture_typeParam)) then
 update Projects 
-set warning_at = warning_atParam,
+set contacts = 0,
+	resets = resets + 1,
     modified_by = modified_byParam,
     last_update = now()
 where adapter_code = adapter_codeParam and fixture_type = fixture_typeParam;
@@ -19,5 +20,4 @@ END;
 //
 delimiter ;
 
-call updateWarning(1705, "FCT", 65000, "admin");
-
+#call resetCounter(1704, "FCT", "admin");

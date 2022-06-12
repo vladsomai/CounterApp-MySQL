@@ -14,5 +14,4 @@ END;
 //
 delimiter ;
 
-call getContacts(1707, "ICT");
-
+#call getContacts(1707, "ICT");

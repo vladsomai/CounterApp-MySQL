@@ -1,5 +1,3 @@
-select * from projects;
-
 drop procedure if exists updateContacts;
 
 delimiter //
@@ -18,7 +16,4 @@ END;
 //
 delimiter ;
 
-call updateContacts(101, "FCT", 81000);
-select * from projects;
-
-
+#call updateContacts(101, "FCT", 0);

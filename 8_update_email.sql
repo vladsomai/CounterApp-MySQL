@@ -1,7 +1,7 @@
 drop procedure if exists updateEmail;
 
 delimiter //
-CREATE PROCEDURE updateEmail(adapter_codeParam int, fixture_typeParam VARCHAR(30), owner_emailParam varchar(50), modified_byParam VARCHAR(50))
+CREATE PROCEDURE updateEmail(adapter_codeParam int, fixture_typeParam VARCHAR(30), owner_emailParam varchar(65000), modified_byParam VARCHAR(50))
 BEGIN
 if (select exists(select * from Projects where adapter_code=adapter_codeParam and fixture_type=fixture_typeParam)) then
 update Projects 
@@ -18,7 +18,4 @@ END;
 //
 delimiter ;
 
-call updateEmail(91, "FCT", "somaivlad@gmail.com", "vladsomai@continental.com");
-call updateEmail(92, "FCT", "somaivlad@gmail.com", "vladsomai@continental.com");
-call updateEmail(101, "FCT", "somaivlad@gmail.com", "vladsomai@continental.com");
-
+#call updateEmail(91, "FCT", "somaivlad@gmail.com", "vladsomai@continental.com");
