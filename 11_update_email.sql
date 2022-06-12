@@ -18,5 +18,7 @@ END;
 //
 delimiter ;
 
-call updateEmail(1704, "FCT", "vlad.somai@conti.com", "vladsomai@continental.com");
+call updateEmail(91, "FCT", "somaivlad@gmail.com", "vladsomai@continental.com");
+call updateEmail(92, "FCT", "somaivlad@gmail.com", "vladsomai@continental.com");
+call updateEmail(101, "FCT", "somaivlad@gmail.com", "vladsomai@continental.com");
 

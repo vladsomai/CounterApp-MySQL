@@ -1,11 +1,13 @@
-drop procedure if exists updateTemperature;
+select * from projects;
+
+drop procedure if exists updateContacts;
 
 delimiter //
-CREATE PROCEDURE updateTemperature(adapter_codeParam int, fixture_typeParam VARCHAR(30), temperatureParam int)
+CREATE PROCEDURE updateContacts(adapter_codeParam int, fixture_typeParam VARCHAR(30), contactsParam int)
 BEGIN
 if (select exists(select * from Projects where adapter_code=adapter_codeParam and fixture_type=fixture_typeParam)) then
 update Projects 
-set temperature = temperatureParam
+set contacts = contactsParam
 where adapter_code = adapter_codeParam and fixture_type = fixture_typeParam;
 else
     SIGNAL SQLSTATE '45000'
@@ -16,5 +18,7 @@ END;
 //
 delimiter ;
 
-call updateTemperature(91, "FCT", 23);
+call updateContacts(101, "FCT", 81000);
+select * from projects;
+
 
