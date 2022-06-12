@@ -10,7 +10,7 @@ CREATE TABLE Projects (
     contacts_limit INT NOT NULL,
     warning_at INT NOT NULL,
     resets INT DEFAULT 0,
-    temperature INT DEFAULT 0,
+    temperature INT DEFAULT 25,
     modified_by VARCHAR(100) NOT NULL default "ROOT",
     last_update DATETIME,
     CONSTRAINT CheckWarningLessThanLimit CHECK (
